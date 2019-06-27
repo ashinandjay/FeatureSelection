@@ -25,7 +25,7 @@ The source code is freely available at: https://github.com/ashinandjay/FeatureSe
 To install our tool, first download the zip file manually from github, or use the code below in Unix:
 ```{r,engine='bash',eval=FALSE, download}
 cd your_folder_path
-wget https://github.com/ashinandjay/FeatureSelection.git
+wget https://github.com/ashinandjay/FeatureSelection/archive/master.zip
 ```
 Unzip the file:
 ```{r,engine='bash',eval=FALSE, unzip}
@@ -74,7 +74,7 @@ Run Feature_Selection.py:
 Feature_Selection.py [Feauture selection number] [Number of feature to select] [Feature Vectors] [Label Vectors]
 ```
 
-Example:using Lasso method to select 3 features
+Example: Using **Lasso** method to select **3** features
 ```{r,engine='bash',eval=FALSE}
 Feature_Selection.py 1 3 Feaute_Vectors.tsv label.txt
 ```
