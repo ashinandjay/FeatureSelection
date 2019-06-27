@@ -350,6 +350,76 @@ def ReliefF(X,y,n):
     Reresult.to_csv("ReliefF_out.csv")
     return None
 
+# Feature selection IG
+def calProb(array):
+	myProb = {}
+	myClass = set(array)
+	for i in myClass:
+		myProb[i] = array.count(i) / len(array)
+	return myProb
+
+def jointProb(newArray, labels):
+	myJointProb = {}
+	for i in range(len(labels)):
+		myJointProb[str(newArray[i]) + '-' + str(labels[i])] = myJointProb.get(str(newArray[i]) + '-' + str(labels[i]), 0) + 1
+
+	for key in myJointProb:
+		myJointProb[key] = myJointProb[key] / len(labels)
+	return myJointProb
+
+def IG(encodings,labelfile,k):
+    encoding=np.array(encodings)
+    sample=encoding[:,0]
+    data=encoding[:,1:]
+    shape=data.shape
+    data = np.reshape(data, shape[0] * shape[1])
+    data = np.reshape([float(i) for i in data], shape)
+    samples=[i for i in sample]
+    file = open(labelfile,'r')
+    file.readline()
+    for line in file.readlines():
+        records=line[:]
+    myDict = {}
+    try:
+	    for i in records:
+		     array = i.rstrip().split() if i.strip() != '' else None
+		     myDict[array[0]] = int(array[1])
+    except IndexError as e:
+        print(e)
+    labels = []
+    for i in samples:
+	     labels.append(myDict.get(i, 0))
+
+    dataShape = data.shape
+    features=range(dataShape[1])
+
+    if dataShape[0] != len(labels):
+	    print('Error: inconsistent data shape with sample number.')
+    probY = calProb(labels)
+    myFea = {}
+    binBox = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    for i in range(len(features)):
+	     array = data[:, i]
+	     newArray = list(pd.cut(array, len(binBox), labels= binBox))
+	     probX = calProb(newArray)
+	     probXY = jointProb(newArray, labels)
+	     HX = -1 * sum([p * math.log(p, 2) for p in probX.values()])
+	     HXY = 0
+	     for y in probY.keys():
+		     for x in probX.keys():
+			     if str(x) + '-' + str(y) in probXY:
+				     HXY = HXY + (probXY[str(x) + '-' + str(y)] * math.log(probXY[str(x) + '-' + str(y)] / probY[y], 2))
+	     myFea[features[i]] = HX + HXY
+    res=[]
+    for key in sorted(myFea.items(), key=lambda item:item[1], reverse=True):
+	    res.append([key[0], '{0:.3f}'.format(myFea[key[0]])]) 
+    res=np.array(res)
+    importance=res[:,0]
+    feature_=np.array([float(i) for i in importance])
+    mask=feature_[:k].astype(int)
+    new_data=data[:,mask]
+    return new_data
+
 # main function
 
 if(option == "1"):
@@ -419,6 +489,10 @@ elif(option == "19"):
     # Feature selection Fisher_score
 elif(option == "20"):
     # Feature selection LFDA
+elif(option == "21"):
+    # Feature selection IG
+    IGresult=IG(feature_o,label,selected_number)
+    IGresult.to_csv("IG_out.csv")
 else:
     print("Invalid method number. Please check the method table!")
     
