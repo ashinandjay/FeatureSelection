@@ -25,7 +25,7 @@ The source code is freely available at: https://github.com/ashinandjay/FeatureSe
 To install our tool, first download the zip file manually from github, or use the code below in Unix:
 ```{r,engine='bash',eval=FALSE, download}
 cd your_folder_path
-wget https://github.com/maqin2001/geneqc/archive/master.zip
+wget https://github.com/ashinandjay/FeatureSelection.git
 ```
 Unzip the file:
 ```{r,engine='bash',eval=FALSE, unzip}
