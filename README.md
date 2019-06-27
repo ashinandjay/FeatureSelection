@@ -81,7 +81,7 @@ Feature_Selection.py 1 3 Feaute_Vectors.tsv label.txt
 ```
 
 ## Feature Clustering
-Our Feature Clustering tool contains 9 unsupervised clustering methods.
+Our Feature Clustering tool contains 11 unsupervised clustering methods.
 
 Feature Clustering Method | Feature Clustering Number
 ------------------------ | -------------------------
