@@ -93,6 +93,7 @@ Non-negative matrix factorization | 5
 Multi-dimensional Scaling | 6
 Independent Component Analysis | 7
 Factor Analysis | 8
+t-SNE | 9
 
 For using our Feacture Selection Tool, Three inputs are required: 
 1. Feauture Clustering number (See the table above)
