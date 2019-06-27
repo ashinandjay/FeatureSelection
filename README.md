@@ -52,17 +52,17 @@ XGBoost | 7
 SVM-RFE | 8
 LOG-RFE | 9
 Mutual Information | 10
-MRMR | 11
-JMI | 12
-MRMD | 13
+Minimum Redundancy Maximum Relevance | 11
+Joint Mutual Information | 12
+Maximum-Relevance-Maximum-Distance | 13
 ReliefF | 14
 Trace Ratio | 15
 Gini index | 16
 T Score | 17
 SPEC | 18
 Fisher Score | 19
-LFDA | 20
-IG   | 21
+Linear Discriminant Analysis | 20
+Information Gain  | 21
 
 For using our Feacture Selection Tool, Four inputs are required: 
 1. Feauture selection number (See the table above)
