@@ -94,6 +94,8 @@ Multi-dimensional Scaling | 6
 Independent Component Analysis | 7
 Factor Analysis | 8
 t-SNE | 9
+K-means | 10
+DBSCAN | 11
 
 For using our Feacture Selection Tool, Three inputs are required: 
 1. Feauture Clustering number (See the table above)
