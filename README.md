@@ -38,7 +38,7 @@ The DNA, RNA or protein sequence data (FASTA format) and their labels (txt forma
 
 ## Feature Selection
 
-Our Feature Selection tool contains 20 supervised selection methods.
+Our Feature Selection tool contains 21 supervised selection methods.
 
 Feature Selection Method | Feature Selection Number
 ------------------------ | -------------------------
