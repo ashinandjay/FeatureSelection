@@ -9,7 +9,7 @@
 ### * [Feature Selection](#Feature-Selection)
 ### * [Feature Clustering](#Feature-Clustering)
 ### * [Feature Evaluation](#Feature-Evaluation)
-### * [Feature Evaluation NN](#Feature-Evaluation-NN)
+### * [Feature Evaluation Neural Network](#Feature-Evaluation-Neural-Network)
 ### * [Output](#Output)
 
 ## Installation
