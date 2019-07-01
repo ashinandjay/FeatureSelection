@@ -544,8 +544,8 @@ def feature_ranking2(score, **kwargs):
         return idx
 
 # Feature selection Fisher Score
-import construct_W
 def fisher_score(X, y):
+    import construct_W
     # Construct weight matrix W in a fisherScore way
     kwargs = {"neighbor_mode": "supervised", "fisher_score": True, 'y': y}
     W = construct_W.construct_W(X, **kwargs)
@@ -670,8 +670,7 @@ def IG(encodings,labelfile,k):
     importance=res[:,0]
     feature_=np.array([float(i) for i in importance])
     mask=feature_[:k].astype(int)
-    new_data=data[:,mask]
-    return new_data
+    return mask
 
 #- main function ----------------------------------------------------------------------
 
@@ -786,7 +785,8 @@ elif(option == "19"):
     tscoreresult.to_csv("T_Score_out.csv")
 elif(option == "20"):
     # Feature selection IG
-    IGresult=IG(feature_o,label,selected_number)
+    IGresult=IG(feature_o,"label.txt",selected_number)
+    IGresult = feature_o[feature_o.columns[IGresult]]
     IGresult.to_csv("IG_out.csv")
 else:
     print("Invalid method number. Please check the method table!")
