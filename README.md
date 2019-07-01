@@ -38,7 +38,7 @@ The DNA, RNA or protein sequence data (FASTA format) and their labels (txt forma
 
 ## Feature Selection
 
-Our Feature Selection tool contains 21 supervised selection methods.
+Our Feature Selection tool contains 20 supervised selection methods.
 
 Feature Selection Method | Feature Selection Number
 ------------------------ | -------------------------
@@ -58,11 +58,10 @@ Maximum-Relevance-Maximum-Distance | 13
 ReliefF | 14
 Trace Ratio | 15
 Gini index | 16
-T Score | 17
-SPEC | 18
-Fisher Score | 19
-Linear Discriminant Analysis | 20
-Information Gain  | 21
+SPEC | 17
+Fisher Score | 18
+T Score | 19
+Information Gain  | 20
 
 For using our Feacture Selection Tool, Four inputs are required: 
 1. Feauture selection number (See the table above)
