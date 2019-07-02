@@ -32,7 +32,7 @@ feature_o = pd.read_csv(feature,delim_whitespace=True,index_col=0,float_precisio
 def pcaselection(k,X):
     X=np.array(X)
     pcaresult = PCA(n_components=k).fit_transform(X)
-    pcaresult.to_csv("PCA_out.csv")
+    np.savetxt("PCA_out.csv", pcaresult, delimiter=",")
     return None
 
 # Feature selection kernelPCA
@@ -40,7 +40,7 @@ def kernelPCA(k,X):
     X=np.array(X)
     kpca=KernelPCA(n_components=k)
     kpcaresult=kpca.fit_transform(X)
-    kpcaresult.to_csv("KernelPCA_out.csv")
+    np.savetxt("KernelPCA_out.csv", kpcaresult, delimiter=",")
     return None
 
 # Feature selection Locally-linear embedding
@@ -48,7 +48,7 @@ def lle(k,X):
     X=np.array(X)
     embedding = LocallyLinearEmbedding(n_components=k)
     lleresult = embedding.fit_transform(X)
-    lleresult.to_csv("LLE_out.csv")
+    np.savetxt("LLE_out.csv", lleresult, delimiter=",")
     return None
 
 # Feature selection SVD
@@ -56,7 +56,7 @@ def svd(k,X):
     X=np.array(X)
     SVDMethod = TruncatedSVD(n_components=k)
     svdresult=SVDMethod.fit_transform(X)
-    svdresult.to_csv("SVD_out.csv")
+    np.savetxt("SVD_out.csv", svdresult, delimiter=",")
     return None
 
 # Feature selection NMF
@@ -64,28 +64,28 @@ def nmf(k,X):
     X=np.array(X)
     NMFmodel=NMF(n_components=k)
     nmfresult= NMFmodel.fit_transform(X)
-    nmfresult.to_csv("NMF_out.csv")
+    np.savetxt("NMF_out.csv", nmfresult, delimiter=",")
     return None
 
 # Feature selection MDS
 def mds(k,X):
     MDSmodel = MDS(n_components=k)
     mdsresult = MDSmodel.fit_transform(X)
-    mdsresult.to_csv("NDS_out.csv")
+    np.savetxt("MDS_out.csv", mdsresult, delimiter=",")
     return None
 
 # Feature selection ICA
 def ICA(data,n_components):
     ica = FastICA(n_components=n_components)
     X_transformed = ica.fit_transform(data)
-    X_transformed.to_csv("ICA_out.csv")
+    np.savetxt("ICA_out.csv", X_transformed, delimiter=",")
     return None
 
 # Feature selection FA
 def FA(data,n_components):
     fa= FactorAnalysis(n_components=n_components)
     FAresult=fa.fit_transform(data)
-    FAresult.to_csv("FA_out.csv")
+    np.savetxt("FA_out.csv", FAresult, delimiter=",")
     return None
 
 # main code
