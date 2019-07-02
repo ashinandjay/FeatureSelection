@@ -14,6 +14,7 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.manifold import MDS
 from sklearn.decomposition import FactorAnalysis
 from sklearn.decomposition import FastICA
+from sklearn.cluster import KMeans
 
 # find the path
 Script_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
@@ -88,6 +89,13 @@ def FA(data,n_components):
     np.savetxt("FA_out.csv", FAresult, delimiter=",")
     return None
 
+# Feature selection Kmeans
+def kmeansselection(k,X):
+    X=np.array(X)
+    kmeansresult=KMeans(n_clusters = k).fit_transform(X)
+    np.savetxt("KMeans_out.csv", kmeansresult, delimiter=",")    
+    return None 
+
 # main code
 
 if(option == "1"):
@@ -116,6 +124,9 @@ elif(option == "8"):
     # Feature selection FA
     X=np.array(feature_o)
     FA(X,n_components=selected_number)
+elif(option == "9"):
+    # Feature selection KMeans
+    kmeansselection(selected_number,feature_o)
 else:
     print("Invalid method number. Please check the method table!")
 
