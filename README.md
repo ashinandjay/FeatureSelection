@@ -110,4 +110,4 @@ Feature_Reduction.py [Feauture Reduction number] [Number of Clusters to select] 
 
 Example: Using **PCA** method to select **3** clusters
 ```{r,engine='bash',eval=FALSE}
-Feature_Clustering.py 3 3 Feaute_Vectors.tsv
+Feature_Reduction.py 3 3 Feaute_Vectors.tsv
