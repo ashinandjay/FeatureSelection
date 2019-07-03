@@ -7,7 +7,7 @@
 ### * [Data Preparation](#Data-Preparation)
 
 ### * [Feature Selection](#Feature-Selection)
-### * [Feature Clustering](#Feature-Clustering)
+### * [Feature Reduction](#Feature-Reduction)
 ### * [Feature Evaluation](#Feature-Evaluation)
 ### * [Feature Evaluation Neural Network](#Feature-Evaluation-Neural-Network)
 ### * [Output](#Output)
@@ -79,33 +79,35 @@ Example: Using **Lasso** method to select **3** features
 Feature_Selection.py 1 3 Feaute_Vectors.tsv label.txt
 ```
 
-## Feature Clustering
-Our Feature Clustering tool contains 11 unsupervised clustering methods.
+## Feature Reduction
+Our Feature Reduction tool contains 13 unsupervised dimensionality reduction methods.
 
-Feature Clustering Method | Feature Clustering Number
+Feature Reduction Method | Feature Reduction Number
 ------------------------ | -------------------------
-Principal Component Analysis | 1
-Kernel PCA | 2
-Locally-linear embedding | 3
-Singular Value Decomposition | 4
-Non-negative matrix factorization | 5
-Multi-dimensional Scaling | 6
-Independent Component Analysis | 7
-Factor Analysis | 8
-K-means | 9
-DBSCAN | 10
-t-SNE | 11
+K-means | 1
+T-SNE   | 2
+Principal Component Analysis | 3
+Kernel PCA | 4
+Locally-linear embedding | 5
+Singular Value Decomposition | 6
+Non-negative matrix factorization | 7
+Multi-dimensional Scaling | 8
+Independent Component Analysis | 9
+Factor Analysis | 10
+Agglomerate Feature | 11
+Gaussian random projection | 12
+Sparse random projection | 13
 
-For using our Feacture Selection Tool, Three inputs are required: 
-1. Feauture Clustering number (See the table above)
+For using our Feacture Reduction Tool, Three inputs are required: 
+1. Feauture Reduction number (See the table above)
 2. Number of Clusters (how many number of Clusters you want)
 3. Feature Vectors (Feature extraction output file)
 
-Run Feature_Clustering.py:
+Run Feature_Reduction.py:
 ```{r,engine='bash',eval=FALSE}
-Feature_Clustering.py [Feauture Clustering number] [Number of Clusters to select] [Feature Vectors]
+Feature_Reduction.py [Feauture Reduction number] [Number of Clusters to select] [Feature Vectors]
 ```
 
 Example: Using **PCA** method to select **3** clusters
 ```{r,engine='bash',eval=FALSE}
-Feature_Clustering.py 1 3 Feaute_Vectors.tsv
+Feature_Clustering.py 3 3 Feaute_Vectors.tsv
