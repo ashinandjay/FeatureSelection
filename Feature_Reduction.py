@@ -1,4 +1,4 @@
-# This code is used for feature clustering methods, 
+# This code is used for feature Reduction methods, 
 # The output file will be generated in same folder of this code
 # -------------------------------------------------------------
 
