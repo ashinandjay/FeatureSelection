@@ -21,19 +21,15 @@ from sklearn.naive_bayes import GaussianNB
 import matplotlib.pyplot as plt
 
 # find the path
-#Script_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+Script_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
 # read selected features
-#filename = sys.argv[1]
+filename = sys.argv[1]
 feature = pd.read_csv(filename,index_col=0,float_precision='round_trip')
-#feature_o = pd.read_csv(feature,delim_whitespace=True,index_col=0,float_precision='round_trip')
 
-#filename = "Lasso_out.csv"
-#feature = pd.read_csv(filename,index_col=0,float_precision='round_trip')
 # read feature labels
-#label = sys.argv[2]
-label = pd.read_csv("label.txt",delim_whitespace=True,index_col=0)
-#label = pd.read_csv(label,delim_whitespace=True,index_col=0)
+label = sys.argv[2]
+label = pd.read_csv(label,delim_whitespace=True,index_col=0)
 
 # split data train 70 % and test 30 %
 x_train, x_test, y_train, y_test = train_test_split(feature, label.values.ravel(), test_size=0.3)
