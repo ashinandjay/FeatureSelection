@@ -19,6 +19,7 @@ The package is developed using Python 3(Python Version 3.0 or above) and it can 
 After installaing Anaconda, the following packages need to be installed:
 1. xgboost
 2. skrebate
+3. lightgbm
 
 The source code is freely available at: https://github.com/ashinandjay/FeatureSelection
 
@@ -111,3 +112,27 @@ Feature_Reduction.py [Feauture Reduction number] [Number of Clusters to select] 
 Example: Using **PCA** method to select **3** clusters
 ```{r,engine='bash',eval=FALSE}
 Feature_Reduction.py 3 3 Feaute_Vectors.tsv
+
+## Feature Reduction
+Feature selection method can be evaluated using 10 classifiers.
+
+Index | Classifier Names
+----- | ----------------
+1 | SVM
+2 | KNN
+3 | RandomForest
+4 | LightGBM
+5| xgboost
+6 | AdaBoost
+7 | Bagging
+8| ExtraTree
+9 | Gaussian Naive Bayes
+10 | Gradient Boosting
+
+Run Feature_Evaluation.py:
+```{r,engine='bash',eval=FALSE}
+Feature_Evaluation.py [Feauture selection output] [Label Vectors]
+```
+Example: evaluating Lasso selection method
+```{r,engine='bash',eval=FALSE}
+Feature_Evaluation.py Lasso.csv label.txt
