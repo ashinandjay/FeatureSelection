@@ -112,9 +112,10 @@ Feature_Reduction.py [Feauture Reduction number] [Number of Clusters to select] 
 Example: Using **PCA** method to select **3** clusters
 ```{r,engine='bash',eval=FALSE}
 Feature_Reduction.py 3 3 Feaute_Vectors.tsv
+```
 
-## Feature Reduction
-Feature selection method can be evaluated using 10 classifiers.
+## Feature Evaluation
+Feature selection method can be evaluated using 10 classifiers. The classification accurcay comparison files (plot and table) will be generated in same folder of code.
 
 Index | Classifier Names
 ----- | ----------------
@@ -136,3 +137,4 @@ Feature_Evaluation.py [Feauture selection output] [Label Vectors]
 Example: evaluating Lasso selection method
 ```{r,engine='bash',eval=FALSE}
 Feature_Evaluation.py Lasso.csv label.txt
+```
