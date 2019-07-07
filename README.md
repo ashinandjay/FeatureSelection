@@ -5,7 +5,9 @@
 
 ### * [Installation](#Installation)
 ### * [Data Preparation](#Data-Preparation)
-
+### * [DNA Feature Extraction](#DNA-Feature-Extraction)
+### * [RNA Feature Extraction](#RNA-Feature-Extraction)
+### * [Protein Feature Extraction](#Protein-Feature-Extraction)
 ### * [Feature Selection](#Feature-Selection)
 ### * [Feature Reduction](#Feature-Reduction)
 ### * [Feature Evaluation](#Feature-Evaluation)
@@ -36,6 +38,10 @@ unzip master.zip
 ## Data Preparation
 
 The DNA, RNA or protein sequence data (FASTA format) and their labels (txt format) are required for using our feature selection tool.
+
+## DNA Feature Extraction
+## RNA Feature Extraction
+## Protein Feature Extraction
 
 ## Feature Selection
 
