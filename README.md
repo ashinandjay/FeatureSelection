@@ -64,19 +64,97 @@ monoDiKGap | 16
 
 DNA_Feature_Extraction require two inputs: DNA Extraction number and DNA sequencing data.
 
-DNA_Feature_Extraction.py:
+Run DNA_Feature_Extraction.py:
 ```{r,engine='bash',eval=FALSE}
 DNA_Feature_Extraction.py [DNA Extraction number] [DNA sequencing data]
 ```
 
 Example: Use **kmer** method to extract features from DNA sequencing data
 ```{r,engine='bash',eval=FALSE}
-Feature_Selection.py 1 DNA_sequencing.txt
+DNA_Feature_Extraction.py 1 DNA_sequencing.txt
 ```
 
 ## RNA Feature Extraction
+
+The tool includes 12 feature extraction methods for RNA sequencing data.
+
+RNA Extraction Method | RNA Extraction Number
+--------------------- | -------------------------
+Kmer | 1
+Reverse Compliment Kmer | 2
+Pseudo dinucleotide composition | 3
+Dinucleotide-based auto covariance | 4
+Dinucleotide-based cross covariance | 5
+Dinucleotide-based auto-cross covariance | 6
+Nucleic acid composition | 7
+Di-nucleotide composition| 8
+Tri-nucleotide composition | 9
+zcurve | 10
+monoMonoKGap | 11
+monoDiKGap | 12
+
+RNA_Feature_Extraction require two inputs: RNA Extraction number and RNA sequencing data.
+
+Run RNA_Feature_Extraction.py:
+```{r,engine='bash',eval=FALSE}
+RNA_Feature_Extraction.py [RNA Extraction number] [RNA sequencing data]
+```
+
+Example: Use **kmer** method to extract features from RNA sequencing data
+```{r,engine='bash',eval=FALSE}
+RNA_Feature_Extraction.py 1 RNA_sequencing.txt
+```
+
 ## Protein Feature Extraction
 
+The tool includes 32 feature extraction methods for Protein sequencing data.
+
+Protein Extraction Method | Protein Extraction Number
+--------------------- | -------------------------
+Amino acid composition | 1
+Composition of k-spaced amino acid pairs | 2
+Dipeptide composition | 3
+Grouped dipeptide composition | 4
+Grouped tripeptide composition  | 5
+Cojoint triad | 6
+k-spaced cojoint triad | 7
+Composition| 8
+Transition | 9
+Distribution | 10
+Encoding based on grouped weight | 11
+Auto covariance| 12
+Moran autocorrelation | 13
+Geary autocorrelation | 14
+Quasi-sequence-order | 15
+Pseudo-amino acid composition | 16
+Amphiphilic pseudo-amino acid composition | 17
+Amino Acid Composition PSSM | 18
+Dipeptide composition PSSM | 19
+Pseudo PSSM | 20
+Auto covariance PSSM | 21
+Cross covariance PSSM | 22
+Auto Cross covariance PSSM | 23
+Bigram-PSSM | 24
+AB-PSSM | 25
+Secondary structure composition | 26 
+Accessible surface area composition | 27
+Torsional angles composition | 28
+Torsional angles bigram | 29
+Structural probabilities Bigram | 30
+Torsional angles auto-covariance | 31
+Structural probabilities auto-covariance | 32 
+
+Protein_Feature_Extraction require two inputs: Protein Extraction number and Protein sequencing data.
+
+Run Protein_Feature_Extraction.py:
+```{r,engine='bash',eval=FALSE}
+Protein_Feature_Extraction.py [Protein Extraction number] [Protein sequencing data]
+```
+
+Example: Use **Amino acid composition** method to extract features from Protein sequencing data
+```{r,engine='bash',eval=FALSE}
+Protein_Feature_Extraction.py 1 Protein_sequencing.txt
+```
 ## Feature Selection
 
 Our Feature Selection tool contains 20 supervised selection methods.
