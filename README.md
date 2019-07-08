@@ -40,6 +40,40 @@ unzip master.zip
 The DNA, RNA or protein sequence data (FASTA format) and their labels (txt format) are required for using our feature selection tool.
 
 ## DNA Feature Extraction
+
+The tool includes 16 feature extraction methods for DNA sequencing data.
+
+DNA Extraction Method | DNA Extraction Number
+--------------------- | -------------------------
+Kmer | 1
+Reverse Compliment Kmer | 2
+Pseudo dinucleotide composition | 3
+Pseudo k-tuple nucleotide composition | 4
+Dinucleotide-based auto covariance | 5
+Dinucleotide-based cross covariance | 6
+Dinucleotide-based auto-cross covariance | 7
+Trinucleotide-based auto covariance | 8
+Trinucleotide-based cross covariance | 9
+Trinucleotide-based auto-cross covariance | 10
+Nucleic acid composition | 11
+Di-nucleotide composition| 12
+Tri-nucleotide composition | 13
+zcurve | 14
+monoMonoKGap | 15
+monoDiKGap | 16
+
+DNA_Feature_Extraction require two inputs: DNA Extraction number and DNA sequencing data.
+
+DNA_Feature_Extraction.py:
+```{r,engine='bash',eval=FALSE}
+DNA_Feature_Extraction.py [DNA Extraction number] [DNA sequencing data]
+```
+
+Example: Use **kmer** method to extract features from DNA sequencing data
+```{r,engine='bash',eval=FALSE}
+Feature_Selection.py 1 DNA_sequencing.txt
+```
+
 ## RNA Feature Extraction
 ## Protein Feature Extraction
 
