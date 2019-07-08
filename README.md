@@ -195,7 +195,7 @@ Feature_Selection.py [Feauture selection number] [Number of feature to select] [
 
 Example: Using **Lasso** method to select **3** features
 ```{r,engine='bash',eval=FALSE}
-Feature_Selection.py 1 3 Feaute_Vectors.tsv label.txt
+Feature_Selection.py 1 3 Feaute_Vectors.csv label.txt
 ```
 
 ## Feature Reduction
@@ -229,7 +229,7 @@ Feature_Reduction.py [Feauture Reduction number] [Number of Clusters to select] 
 
 Example: Using **PCA** method to select **3** clusters
 ```{r,engine='bash',eval=FALSE}
-Feature_Reduction.py 3 3 Feaute_Vectors.tsv
+Feature_Reduction.py 3 3 Feaute_Vectors.csv
 ```
 
 ## Feature Evaluation
