@@ -220,6 +220,14 @@ Autoencoder | 14
 Gaussian Noise Autoencoder | 15
 Variational Autoencoder | 16
 
+Our Feature Reduction tool also contains 3 deep learning dimensionality reduction methods.
+
+Feature Reduction Method | Feature Reduction Number
+------------------------ | -------------------------
+Autoencoder | 1
+Gaussian Noise Autoencoder | 2
+Variational Autoencoder | 3
+
 For using our Feacture Reduction Tool, Three inputs are required: 
 1. Feauture Reduction number (See the table above)
 2. Number of Clusters (how many number of Clusters you want)
@@ -261,4 +269,10 @@ Feature_Evaluation.py Lasso.csv label.txt
 ```
 
 ## Feature Evaluation Neural Network
-Feature selection also can be evaluated using some neural network classification methods
+Feature selection also can be evaluated using 3 neural network classification methods.
+
+Feature Evaluation NN | Feature Evaluation NN Number
+--------------------- | -------------------------
+Convolutional neural network | 1
+Deep neural network   | 2
+Recurrent neural network | 3
