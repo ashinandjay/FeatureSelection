@@ -216,9 +216,6 @@ Factor Analysis | 10
 Agglomerate Feature | 11
 Gaussian random projection | 12
 Sparse random projection | 13
-Autoencoder | 14
-Gaussian Noise Autoencoder | 15
-Variational Autoencoder | 16
 
 Our Feature Reduction tool also contains 3 deep learning dimensionality reduction methods.
 
