@@ -157,7 +157,7 @@ Protein_Feature_Extraction.py 1 Protein_sequencing.txt
 ```
 ## Feature Selection
 
-Our Feature Selection tool contains 23 supervised selection methods.
+Our Feature Selection tool contains 20 supervised selection methods.
 
 Feature Selection Method | Feature Selection Number
 ------------------------ | -------------------------
@@ -181,9 +181,6 @@ SPEC | 17
 Fisher Score | 18
 T Score | 19
 Information Gain  | 20
-Autoencoder | 21
-Gaussian Noise Autoencoder | 22
-Variational Autoencoder | 23
 
 For using our Feacture Selection Tool, Four inputs are required: 
 1. Feauture selection number (See the table above)
@@ -202,7 +199,7 @@ Feature_Selection.py 1 3 Feaute_Vectors.csv label.txt
 ```
 
 ## Feature Reduction
-Our Feature Reduction tool contains 13 unsupervised dimensionality reduction methods.
+Our Feature Reduction tool contains 16 unsupervised dimensionality reduction methods.
 
 Feature Reduction Method | Feature Reduction Number
 ------------------------ | -------------------------
@@ -219,6 +216,9 @@ Factor Analysis | 10
 Agglomerate Feature | 11
 Gaussian random projection | 12
 Sparse random projection | 13
+Autoencoder | 14
+Gaussian Noise Autoencoder | 15
+Variational Autoencoder | 16
 
 For using our Feacture Reduction Tool, Three inputs are required: 
 1. Feauture Reduction number (See the table above)
@@ -259,3 +259,6 @@ Example: evaluating Lasso selection method
 ```{r,engine='bash',eval=FALSE}
 Feature_Evaluation.py Lasso.csv label.txt
 ```
+
+## Feature Evaluation Neural Network
+Feature selection also can be evaluated using some neural network classification methods
