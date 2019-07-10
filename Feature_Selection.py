@@ -50,7 +50,7 @@ label = pd.read_csv(label,delim_whitespace=True,index_col=0)
 
 # Feature selection Lasso    
 def Lasso_selection(k,X,y):
-    clf = LassoCV(cv=3)
+    clf = LassoCV(cv=k)
     lassoresult = RFE(clf,k).fit(X,y.values.ravel()).get_support(indices=True)
     lassoresult = X[X.columns[lassoresult]]
     lassoresult.to_csv("Lasso_out.csv")
