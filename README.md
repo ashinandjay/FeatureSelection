@@ -157,7 +157,7 @@ Protein_Feature_Extraction.py 1 Protein_sequencing.txt
 ```
 ## Feature Selection
 
-Our Feature Selection tool contains 20 supervised selection methods.
+Our Feature Selection tool contains 23 supervised selection methods.
 
 Feature Selection Method | Feature Selection Number
 ------------------------ | -------------------------
@@ -181,6 +181,9 @@ SPEC | 17
 Fisher Score | 18
 T Score | 19
 Information Gain  | 20
+Autoencoder | 21
+Gaussian Noise Autoencoder | 22
+Variational Autoencoder | 23
 
 For using our Feacture Selection Tool, Four inputs are required: 
 1. Feauture selection number (See the table above)
