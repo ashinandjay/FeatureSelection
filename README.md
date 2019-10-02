@@ -1,5 +1,5 @@
-# Feature Extraction and Selection Tool
-*A feature extraction and selection Python package for DNA, RNA, Protein sequence data.*
+# **ALLFEAUTRE** An intergrated python package for DNA, RNA and Protein sequecing data analysis
+*Include Feature extraction, Feature selection, Dimensionality Reduction, Models Construction for sequencing data.*
 
 ## Table of Contents
 
