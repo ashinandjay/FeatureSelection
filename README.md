@@ -1,4 +1,4 @@
-# **ALLFEAUTRE** An intergrated python package for DNA, RNA and Protein sequecing data analysis
+# **ALLFEAUTRE** - An intergrated python package for DNA, RNA and Protein sequecing data analysis
 *Include Feature extraction, Feature selection, Dimensionality Reduction, Models Construction for sequencing data.*
 
 ## Table of Contents
@@ -9,10 +9,8 @@
 ### * [RNA Feature Extraction](#RNA-Feature-Extraction)
 ### * [Protein Feature Extraction](#Protein-Feature-Extraction)
 ### * [Feature Selection](#Feature-Selection)
-### * [Feature Reduction](#Feature-Reduction)
+### * [Dimensionality Reduction](#Dimensionality-Reduction)
 ### * [Feature Evaluation](#Feature-Evaluation)
-### * [Feature Evaluation Neural Network](#Feature-Evaluation-Neural-Network)
-### * [Output](#Output)
 
 ## Installation
 
@@ -198,11 +196,11 @@ Example: Using **Lasso** method to select **3** features
 Feature_Selection.py 1 3 Feaute_Vectors.csv label.txt
 ```
 
-## Feature Reduction
+## Dimensionality Reduction
 Our Feature Reduction tool contains 16 unsupervised dimensionality reduction methods.
 
-Feature Reduction Method | Feature Reduction Number
------------------------- | -------------------------
+Dimensionality Reduction Method | Feature Reduction Number
+------------------------------- | -------------------------
 K-means | 1
 T-SNE   | 2
 Principal Component Analysis | 3
@@ -216,14 +214,9 @@ Factor Analysis | 10
 Agglomerate Feature | 11
 Gaussian random projection | 12
 Sparse random projection | 13
-
-Our Feature Reduction tool also contains 3 deep learning dimensionality reduction methods.
-
-Feature Reduction Method | Feature Reduction Number
------------------------- | -------------------------
-Autoencoder | 1
-Gaussian Noise Autoencoder | 2
-Variational Autoencoder | 3
+Autoencoder | 14
+Gaussian Noise Autoencoder | 15
+Variational Autoencoder | 16
 
 For using our Feacture Reduction Tool, Three inputs are required: 
 1. Feauture Reduction number (See the table above)
@@ -241,20 +234,7 @@ Feature_Reduction.py 3 3 Feaute_Vectors.csv
 ```
 
 ## Feature Evaluation
-Feature selection method can be evaluated using 10 classifiers. The classification accurcay comparison files (plot and table) will be generated in same folder of code.
-
-Index | Classifier Names
------ | ----------------
-1 | SVM
-2 | KNN
-3 | RandomForest
-4 | LightGBM
-5| xgboost
-6 | AdaBoost
-7 | Bagging
-8| ExtraTree
-9 | Gaussian Naive Bayes
-10 | Gradient Boosting
+Feature selection method can be evaluated using 10 classifiers and 3 deep learning methods include SVM, KNN, RandomForest, LightGBM, XGBoost, Adaboost, Bagging, ExtraTree, gaussian Naïve Bayes, gradient boosting, DNN, CNN and RNN predictors. The classification accurcay comparison files (plot and table) will be generated in same folder of code.
 
 Run Feature_Evaluation.py:
 ```{r,engine='bash',eval=FALSE}
@@ -264,12 +244,3 @@ Example: evaluating Lasso selection method
 ```{r,engine='bash',eval=FALSE}
 Feature_Evaluation.py Lasso.csv label.txt
 ```
-
-## Feature Evaluation Neural Network
-Feature selection also can be evaluated using 3 neural network classification methods.
-
-Feature Evaluation NN | Feature Evaluation NN Number
---------------------- | -------------------------
-Convolutional neural network | 1
-Deep neural network   | 2
-Recurrent neural network | 3
