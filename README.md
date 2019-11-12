@@ -1,4 +1,4 @@
-# **ALLFEAUTRE** - An intergrated python package for DNA, RNA and Protein sequecing data analysis
+# **SeqFea-Learn** - An intergrated python package for DNA, RNA and Protein sequecing data analysis
 *Include Feature extraction, Feature selection, Dimensionality Reduction, Models Construction for sequencing data.*
 
 ## Table of Contents
