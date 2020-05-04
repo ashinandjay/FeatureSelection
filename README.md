@@ -244,3 +244,10 @@ Example: evaluating Lasso selection method
 ```{r,engine='bash',eval=FALSE}
 Feature_Evaluation.py Lasso.csv label.txt
 ```
+
+Genotype | Paternal_alleles | Maternal_alleles
+-------- | ---------------- | -----------------
+0/0, ./. | - | -
+1/1, 2/2,... | Alt_allele | Alt_allele
+0/1, 0/2,... | Ref_allele or Alt_allele (50% randomly choose) | Alt_allele or Ref_allele
+1/2 | Alt_allele[0] or Alt_allele[1] (50% randomly choose) | Alt_allele[1] or Alt_allele[0]
